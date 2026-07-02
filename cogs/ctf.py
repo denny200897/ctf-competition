@@ -59,9 +59,9 @@ class CTF(commands.Cog):
     async def ctftime_alert(self):
         await self.bot.wait_until_ready()
         
-        channel = discord.utils.get(self.bot.get_all_channels(), name="ctftime比賽")
+        channel = discord.utils.get(self.bot.get_all_channels(), name="ctf-competition")
         if not channel:
-            print("Cannot find channel named 'ctftime比賽', skipping alert.")
+            print("Cannot find channel named 'ctf-competition', skipping alert.")
             return
 
         events = await self.fetch_upcoming_ctfs(limit=3)
